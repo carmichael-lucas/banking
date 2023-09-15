@@ -19,12 +19,12 @@ module App
       private
   
       def baas
-        "Lib::Banking::#{@vendor}::Account".constatize.new
+        "::Banking::#{@vendor}::Account".constantize.new
       end
   
       def serializer(response)
         {
-          banking_token: response[:banking_token]
+          banking_token: response[:banking_token],
           name: response[:name],
           email: response[:email],
           document: response[:document]

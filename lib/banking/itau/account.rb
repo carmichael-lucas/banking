@@ -13,9 +13,9 @@ module Lib
         def create(params:)
           serializer(
             gem_dock.new(
-              bankingToken: SecureRandom.uuid,
+              banking_uuid: SecureRandom.uuid,
               name: 'John Joe',
-              nationalRegistration: '411.242.543-98'
+              cpf: '411.242.543-98'
               owner: 'jonh.doe@example.com'
             )
           )
